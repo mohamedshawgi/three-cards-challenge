@@ -1,0 +1,119 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width:100%;
+    min-width: 327px;
+    height:1874px;
+    font-size: 15px;
+}
+main{
+    font-family: 'Lexend Deca',sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--Very-light-gray);
+    height: inherit;
+    justify-content: center;
+   
+}
+.container{
+    width:55%;
+}
+main div h2{
+    font-family:'Big Shoulders Display',cursive;
+    text-transform: uppercase;
+    color:var(--Very-light-gray);
+    margin-bottom: 30px;;
+}
+main div img{
+    margin-bottom: 30px;
+}
+.sedan,.suvs,.luxury{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height:33%;
+}
+.sedan{
+    background-color: var(--Bright-orange);
+}
+.suvs{
+    background-color: var(--Dark-cyan);
+}
+.luxury{
+    background-color: var(--very-dark-cyan);
+}
+p{
+    color:var(--Transparent-white);
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+button{
+    border-radius: 15px;
+    padding: 10px 20px;
+    width:auto;
+    border:1px solid var(--Very-light-gray);
+    background-color: var(--Very-light-gray);
+}
+.sedan button{
+    color:var(--Bright-orange);
+}
+.sedan button:hover{
+    color:var(--Very-light-gray);
+    border-color: var(--Very-light-gray);
+    background-color:var(--Bright-orange);
+
+}
+.suvs button:hover{
+    color:var(--Very-light-gray);
+    border-color: var(--Very-light-gray);
+    background-color:var(--Dark-cyan);
+}
+.luxury button:hover{
+    color:var(--Very-light-gray);
+    border-color: var(--Very-light-gray);
+    background-color:var(--very-dark-cyan)
+}
+.suvs button{
+    color:var(--Dark-cyan);
+}
+.luxury button{
+    color: var(--very-dark-cyan);
+}
+@media (min-width:570px){
+    main{
+        flex-direction: row;
+    }
+    body{
+        height:100vh;
+    }
+    .sedan,.suvs,.luxury{height: 80%;}
+    button{
+        width: auto;
+    }
+    .sedan,.suvs,.luxury{
+        display: flex;
+        justify-content: space-evenly;
+        align-items:center;
+        height:auto;
+        max-height: 650px;
+    }
+    .sedan{
+        border-radius: 20px 0 0 20px;
+    }
+    .luxury{
+        border-radius: 0 20px 20px 0;
+    }
+
+  
+}
